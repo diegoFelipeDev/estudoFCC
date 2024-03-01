@@ -1,2 +1,2 @@
 # estudoFCC
-repositorio com códigos do estudo de html e css
+repositorio com códigos de estudo de html, css, javascript, reactjs e php.
