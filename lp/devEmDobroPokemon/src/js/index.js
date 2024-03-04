@@ -11,7 +11,6 @@ vamos precisar trabalhar com um evento de clique feito pelo usuário na listagem
 -adicionar a classe ativo no item da lista selecionado 
 */
 
-
 // precisamos criar duas variáveis no JS pra trabalhar com os elementos da tela
 const listaSelecaoPokemons = document.querySelectorAll('.pokemon')
 const pokemonsCard = document.querySelectorAll('.cartao-pokemon')
