@@ -69,3 +69,25 @@ $i = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 foreach ($i as $j){
 	echo $j;
 }
+
+
+//ARRAYS
+
+<?php
+
+$variavel = array(1, 2, 3, 4, 5);
+foreach ($variavel as $v){
+	echo $v;
+}
+
+$variavel = array("A"=>"Abacaxi", "B"=>"Bola", "C"=> "Cachorro");
+
+foreach($variavel as $v){
+	echo $v;
+}
+
+$variavel = array("A"=>"Abacaxi", "B"=>"Bola", "C"=> "Cachorro");
+echo $variavel[B];
+
+$variavel = array("Abacaxi", "Bola",  "Cachorro");
+echo $variavel[1];
