@@ -379,3 +379,89 @@ Técnica conhecida também por Casting (Manipulação de tipos)
     //será impresso 9... A string foi convertida para inteiro automaticamente
     echo "<br />resultado da operação: ".$operacao->somaValores();
 ?>
+
+
+Exemplo 1 - Vetores e matrizes
+Os vetores e matrizes em PHP, diferente do que ocorre em C/C++ e Pascal, são estruturas dinâmicas, o que pode facilitar muito o trabalho do programador.
+
+Um exemplo:
+
+<?php
+  $vet01 = array();
+  $vet01[] = "Sistemas operacionais";
+  $vet01[] = "Compiladores";
+  $vet01[] = "Bancos de dados";
+  $vet02 = array(1, 2, 3, 4, 5);
+  $vet03 = array( 0 => 0, 2 => 3, 10 => "item 10");
+  $vet04 = ['valor 1', 'string 2', 3, 4.0, false];
+  $vet05 = ["chave1" => 'valor 1', 2, 3, 4, array('item 1', 2 => 0.5)];
+  for ($i = 0; $i < count($vet01); $i++) {
+    echo $vet01[$i] . "<br />";
+  }
+?>
+O exemplo acima demonstra cinco maneiras diferentes de declarar vetores, sendo que os índices não são obrigatórios, e se declarados não precisam ser apenas números ou mesmo sequenciais.
+
+Os exemplos $vet04 e $vet05 mostram que é possível misturar tipos de dados dentro do vetor, sendo que no $vet05 mostra que em qualquer posição do vetor é possível declarar um outro vetor, resultando em uma matriz.
+
+Exemplo 2 - Teste de Conexão
+O exemplo abaixo testa se há conexão com o banco de dados.
+
+<?php
+// Conexão com o banco de dados
+$host = "localhost";
+$db   = "nome-database";
+$user = "root";
+$pass = "";
+$con = mysql_connect($host,$user,$pass);
+if(mysql_select_db($db, $con)){
+  echo "conexao bem sucedida"; //Teste para garantir que há conexão
+}
+else {
+  echo"conexao falhou";
+}
+?>
+Exemplo 3 - Teste de Login
+O exemplo abaixo testa se usuário está com login no banco de dados.
+
+<?php
+// função verifica se o login está feito
+function checaLogin($login, $status){
+      if(isset($login['login'])){
+            if(!empty($login['login']) and ($status['status'] == false)) {
+                $aviso = 'Você não está logado, faça o login para continuar';
+                $status=false;
+                echo $aviso;
+                die();
+            }
+        } else {
+             $status['status'] = true;
+             $aviso = 'Você está logado';
+             echo $aviso;
+        }
+    }
+?>
+Exemplo 4 - Função Dias da Semana
+O exemplo abaixo conforme a data atual, obtém os dias da semana.
+
+<?php
+date_default_timezone_set("Brazil/São Paulo");
+function diasemana($data) {
+$d = explode('/', $data);
+$anohoje = $d[2];
+$meshoje = $d[1];
+$diahoje = $d[0];
+$diasemana = date("w", mktime(0,0,0,$meshoje,$diahoje,$anohoje) );
+switch($diasemana)
+{
+case"0": $diasemana = "Domingo";       break;
+case"1": $diasemana = "Segunda Feira"; break;
+case"2": $diasemana = "Terça Feira";   break;
+case"3": $diasemana = "Quarta Feira";  break;
+case"4": $diasemana = "Quinta Feira";  break;
+case"5": $diasemana = "Sexta Feira";   break;
+case"6": $diasemana = "Sabado";        break;
+}
+return "$diasemana";
+}
+echo '<h1>' , diasemana('20/05/2017') ,  ' - Dia da Semana ' , '</h1>' ;
+?>
