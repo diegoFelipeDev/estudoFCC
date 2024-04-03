@@ -9,7 +9,6 @@ $mensagem = 'hello word';
 
 //Operadores
 
-
 $A = 2;
 $B = 3;
 
