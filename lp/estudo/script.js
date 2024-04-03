@@ -61,6 +61,5 @@ for (let contador = 1; contador <= 9; contador ++){
 ------------------------------------------------
 var listaDeNomes = ["Diogo", "Felipe", "Rodrigues", "Silva"];
 
-for(var indice = 0; indice < listaDeNomes.length; indice++){
-	
+for(var indice = 0; indice < listaDeNomes.length; indice++){	
 }
