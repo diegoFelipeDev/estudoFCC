@@ -1,7 +1,7 @@
-Olá, Mundo!
+#Olá, Mundo!
 print("Olá, Mundo!")
 
-Calculadora Simples
+#Calculadora Simples
 num1 = float(input("Digite o primeiro número: "))
 num2 = float(input("Digite o segundo número: "))
 
@@ -15,7 +15,7 @@ print("Subtração:", subtracao)
 print("Multiplicação:", multiplicacao)
 print("Divisão:", divisao)
 
-Verificando se um Número é Par ou Ímpar
+#Verificando se um Número é Par ou Ímpar
 num = int(input("Digite um número: "))
 
 if num % 2 == 0:
@@ -23,7 +23,7 @@ if num % 2 == 0:
 else:
     print("O número é ímpar.")
 
-Gerando Números Aleatórios
+#Gerando Números Aleatórios
 import random
 
 num_min = int(input("Digite o valor mínimo: "))
@@ -33,7 +33,7 @@ numero_aleatorio = random.randint(num_min, num_max)
 
 print("Número aleatório:", numero_aleatorio)
 
-Jogo da Velha
+#Jogo da Velha
 tabuleiro = [" " for _ in range(9)]
 
 def imprimir_tabuleiro():
