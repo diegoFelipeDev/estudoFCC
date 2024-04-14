@@ -43,7 +43,7 @@ def imprimir_tabuleiro():
 
 imprimir_tabuleiro()
 
-Conversor de Temperatura
+#Conversor de Temperatura
 def celsius_para_fahrenheit(temp_celsius):
     return (temp_celsius * 9/5) + 32
 
@@ -56,7 +56,7 @@ temp_fahrenheit = float(input("Digite a temperatura em Fahrenheit: "))
 print(temp_celsius, "graus Celsius equivalem a", celsius_para_fahrenheit(temp_celsius), "graus Fahrenheit.")
 print(temp_fahrenheit, "graus Fahrenheit equivalem a", fahrenheit_para_celsius(temp_fahrenheit), "graus Celsius.")
 
-Gerador de Senhas Aleatórias
+#Gerador de Senhas Aleatórias
 import random
 import string
 
@@ -69,7 +69,7 @@ tamanho_senha = int(input("Digite o tamanho da senha desejada: "))
 
 print("Senha gerada:", gerar_senha(tamanho_senha))
 
-Contador de Palavras em um Texto
+#Contador de Palavras em um Texto
 texto = input("Digite um texto: ")
 
 palavras = texto.split()
