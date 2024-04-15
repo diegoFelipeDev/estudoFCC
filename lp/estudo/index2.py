@@ -1,12 +1,12 @@
-O Python é uma linguagem de programação de propósito geral que é dinamicamente tipada, interpretada e conhecida por sua fácil leitura com ótimos princípios de design.
+#O Python é uma linguagem de programação de propósito geral que é dinamicamente tipada, interpretada e conhecida por sua fácil leitura com ótimos princípios de design.
 
-O freeCodeCamp tem um dos cursos mais populares sobre Python. É totalmente gratuito. Você pode assisti-lo no YouTube aqui.
+#O freeCodeCamp tem um dos cursos mais populares sobre Python. É totalmente gratuito. Você pode assisti-lo no YouTube aqui.
 
-Algumas informações gerais sobre números de ponto flutuante e como eles funcionam em Python podem ser encontradas aqui.
+#Algumas informações gerais sobre números de ponto flutuante e como eles funcionam em Python podem ser encontradas aqui.
 
-Quase todas as implementações do Python seguem a especificação IEEE 754: Standard for Binary Floating-Point Arithmetic. Mais informações podem ser encontradas no site do IEEE (texto em inglês).
+#Quase todas as implementações do Python seguem a especificação IEEE 754: Standard for Binary Floating-Point Arithmetic. Mais informações podem ser encontradas no site do IEEE (texto em inglês).
 
-Objetos float podem ser criados usando literais de ponto flutuante:
+#Objetos float podem ser criados usando literais de ponto flutuante:
 
 >>> 3.14
 3.14
@@ -24,17 +24,17 @@ Objetos float podem ser criados usando literais de ponto flutuante:
 0.3
 >>> 3.14e+2 # O sinal de '+' não é necessário, mas pode ser usado para a parte exponencial.
 314.0
-Literais numéricos não contêm um sinal. No entanto, a criação de objetos float negativos é possível prefixando com um operador unário - (sinal de menos) sem espaço antes do literal:
+#Literais numéricos não contêm um sinal. No entanto, a criação de objetos float negativos é possível prefixando com um operador unário - (sinal de menos) sem espaço antes do literal:
 
 >>> -3.141592653589793
 -3.141592653589793
 >>> type(-3.141592653589793)
 <class 'float'>
-Da mesma forma, objetos float positivos podem ser prefixados com um operador unário + (mais) sem espaço antes do literal. Normalmente, o sinal de + é omitido:
+#Da mesma forma, objetos float positivos podem ser prefixados com um operador unário + (mais) sem espaço antes do literal. Normalmente, o sinal de + é omitido:
 
 >>> +3.141592653589793
 3.141592653589793
-Observe que zeros à esquerda e à direita são válidos para literais de ponto flutuante.
+#Observe que zeros à esquerda e à direita são válidos para literais de ponto flutuante.
 
 >>> 0.0
 0.0
@@ -44,9 +44,9 @@ Observe que zeros à esquerda e à direita são válidos para literais de ponto 
 100.001
 >>> 001e0010      # O mesmo que 1e10
 10000000000.0
-O construtor float é outra maneira de criar objetos float.
+#O construtor float é outra maneira de criar objetos float.
 
-A criação de objetos float com literais de ponto flutuante é preferível quando possível:
+#A criação de objetos float com literais de ponto flutuante é preferível quando possível:
 
 >>> a = 3.14         # Prefira o literal de ponto flutuante quando possível.
 >>> type(a)
@@ -54,7 +54,7 @@ A criação de objetos float com literais de ponto flutuante é preferível quan
 >>> b = int(3.14)    # Funciona, mas é desnecessário.
 >>> type(b)
 <class 'float'>
-No entanto, o construtor float permite criar objetos float de outros tipos de números:
+#No entanto, o construtor float permite criar objetos float de outros tipos de números:
 
 >>> a = 4
 >>> type(a)
@@ -74,7 +74,7 @@ No entanto, o construtor float permite criar objetos float de outros tipos de n�
 1.0
 >>> float(False)
 0.0
-O construtor float também fará objetos float a partir de strings que representam literais numéricos:
+#O construtor float também fará objetos float a partir de strings que representam literais numéricos:
 
 >>> float('1')
 1.0
@@ -88,7 +88,7 @@ O construtor float também fará objetos float a partir de strings que represent
 3.14
 >>> float('-.15e-2')
 -0.0015
-O construtor float também pode ser usado para fazer representações numéricas de NaN (Not a Number – em português, não é um número), infinity negativo e infinity positivo (observe que as strings para estes não diferenciam maiúsculas de minúsculas):
+#O construtor float também pode ser usado para fazer representações numéricas de NaN (Not a Number – em português, não é um número), infinity negativo e infinity positivo (observe que as strings para estes não diferenciam maiúsculas de minúsculas):
 
 >>> float('nan')
 nan
@@ -101,9 +101,9 @@ inf
 >>> float('-infinity')
 -inf
 Números complexos
-Os números complexos têm uma parte real e uma parte imaginária, cada uma representada por um número de ponto flutuante.
+#Os números complexos têm uma parte real e uma parte imaginária, cada uma representada por um número de ponto flutuante.
 
-A parte imaginária de um número complexo pode ser criada usando um literal imaginário, isso resulta em um número complexo com uma parte real de 0.0:
+#A parte imaginária de um número complexo pode ser criada usando um literal imaginário, isso resulta em um número complexo com uma parte real de 0.0:
 
 >>> a = 3.5j
 >>> type(a)
@@ -114,7 +114,7 @@ A parte imaginária de um número complexo pode ser criada usando um literal ima
 0.0
 >>> a.imag
 3.5
-Não existe literal para criar um número complexo com partes reais e imaginárias diferentes de zero. Para criar um número complexo de parte real diferente de zero, adicione um literal imaginário a um número de ponto flutuante:
+#Não existe literal para criar um número complexo com partes reais e imaginárias diferentes de zero. Para criar um número complexo de parte real diferente de zero, adicione um literal imaginário a um número de ponto flutuante:
 
 >>> a = 1.1 + 3.5j
 >>> type(a)
@@ -128,7 +128,7 @@ Não existe literal para criar um número complexo com partes reais e imaginári
 Ou use o construtor complex.
 
 class complex([real[, imag]])
-Os argumentos usados para chamar o construtor complex podem ser de tipo numérico (incluindo complex) para qualquer parâmetro:
+#Os argumentos usados para chamar o construtor complex podem ser de tipo numérico (incluindo complex) para qualquer parâmetro:
 
 >>> complex(1, 1)
 (1+1j)
@@ -140,14 +140,14 @@ Os argumentos usados para chamar o construtor complex podem ser de tipo numéric
 (1.1+0j)
 >>> complex(0, 3.5)
 3.5j
-Uma string também pode ser usada como argumento. Nenhum segundo argumento é permitido se uma string for usada como argumento
+#Uma string também pode ser usada como argumento. Nenhum segundo argumento é permitido se uma string for usada como argumento
 
 >>> complex("1.1+3.5j")
 (1.1+3.5j)
 bool() é uma função embutida no Python 3. Essa função retorna um valor Booleano, ou seja, True ou False.
 
 Argumentos
-Ela aceita um argumento, x. x é convertido usando o Teste do valor verdade.
+#Ela aceita um argumento, x. x é convertido usando o Teste do valor verdade.
 
 Valor de retorno
 Se x for falso ou omitido, retorna False; do contrário, retorna True.
