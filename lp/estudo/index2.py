@@ -166,9 +166,9 @@ print(bool((2,3,4))) # Retorna True, pois a tupla é um valor diferente de zero
 print(bool([])) # Retorna False, pois a lista está vazia e é igual a 0, conforme o teste do valor verdade
 and, or e not
 
-Documentação do python – Operações booleanas
+#Documentação do python – Operações booleanas
 
-Estas são as operações booleanas, ordenadas por prioridade crescente:
+#Estas são as operações booleanas, ordenadas por prioridade crescente:
 
 OPERAÇÃO	RESULTADO
 x ou y	se x for falso, então y, senão x (1)
@@ -176,10 +176,10 @@ x e y	se x for falso, então x, senão y (2)
 não x	se x for falso, então True, senão False (3)
 Observações:
 
-Este é um operador de curto-circuito, portanto, ele só avalia o segundo argumento se o primeiro for False.
-2. Este é um operador de curto-circuito, portanto, ele só avalia o segundo argumento se o primeiro for True.
+#Este é um operador de curto-circuito, portanto, ele só avalia o segundo argumento se o primeiro for False.
+#2. Este é um operador de curto-circuito, portanto, ele só avalia o segundo argumento se o primeiro for True.
 
-3. not tem prioridade mais baixa do que os operadores não booleanos. Portanto, not a == b é interpretado como not (a == b) e a == not b é um erro de sintaxe.
+#3. not tem prioridade mais baixa do que os operadores não booleanos. Portanto, not a == b é interpretado como not (a == b) e a == not b é um erro de sintaxe.
 
 Exemplos:
 not:
@@ -265,16 +265,16 @@ Os argumentos usados para chamar uma função não podem ser reatribuídos pela 
 >>> fn(a)
 >>> a
 [1, 2, 3, 1]
-As classes fornecem um meio de agrupar dados e funcionalidades. A criação de uma nova classe cria um outro tipo de objeto, permitindo que novas instâncias desse tipo sejam feitas. Cada instância de classe pode ter atributos anexados a ela para manter seu estado. As instâncias de classe também podem ter métodos (definidos por sua classe) para modificar seu estado.
+#As classes fornecem um meio de agrupar dados e funcionalidades. A criação de uma nova classe cria um outro tipo de objeto, permitindo que novas instâncias desse tipo sejam feitas. Cada instância de classe pode ter atributos anexados a ela para manter seu estado. As instâncias de classe também podem ter métodos (definidos por sua classe) para modificar seu estado.
 
-Comparado com outras linguagens de programação, o mecanismo de classe do Python adiciona classes com um mínimo de nova sintaxe e semântica. É uma mistura dos mecanismos de classe encontrados no C++.
+#Comparado com outras linguagens de programação, o mecanismo de classe do Python adiciona classes com um mínimo de nova sintaxe e semântica. É uma mistura dos mecanismos de classe encontrados no C++.
 
-As classes do Python fornecem todos os recursos padrão da Programação Orientada a Objetos: o mecanismo de herança de classe permite várias classes base, uma classe derivada pode substituir qualquer método de sua classe ou classes base e um método pode chamar o método de uma classe base com o mesmo nome.
+#As classes do Python fornecem todos os recursos padrão da Programação Orientada a Objetos: o mecanismo de herança de classe permite várias classes base, uma classe derivada pode substituir qualquer método de sua classe ou classes base e um método pode chamar o método de uma classe base com o mesmo nome.
 
-Os objetos podem conter quantidades e tipos de dados arbitrários. Como acontece com os módulos, as classes participam da natureza dinâmica do Python: elas são criadas em tempo de execução e podem ser modificadas ainda mais após a criação.
+#Os objetos podem conter quantidades e tipos de dados arbitrários. Como acontece com os módulos, as classes participam da natureza dinâmica do Python: elas são criadas em tempo de execução e podem ser modificadas ainda mais após a criação.
 
-Sintaxe de definição de classe:
-A forma mais simples da definição de classe tem esta aparência:
+#Sintaxe de definição de classe:
+#A forma mais simples da definição de classe tem esta aparência:
 
 class NomeClasse:
     <instrução-1>
@@ -282,10 +282,10 @@ class NomeClasse:
         ...
         ...
     <instrução-N>
-Objetos de classe:
-Objetos de classe oferecem suporte a dois tipos de operações: referências de atributo e instanciação.
+#Objetos de classe:
+#Objetos de classe oferecem suporte a dois tipos de operações: referências de atributo e instanciação.
 
-As referências de atributo usam a sintaxe padrão usada para todas as referências de atributo em Python: obj.name. Os nomes de atributos válidos são todos os nomes que estavam no espaço de nomes da classe quando o objeto de classe foi criado. Então, se a definição da classe ficou assim:
+#As referências de atributo usam a sintaxe padrão usada para todas as referências de atributo em Python: obj.name. Os nomes de atributos válidos são todos os nomes que estavam no espaço de nomes da classe quando o objeto de classe foi criado. Então, se a definição da classe ficou assim:
 
 class MinhaClasse:
     """ Um exemplo de classe simples """
@@ -293,12 +293,12 @@ class MinhaClasse:
 
     def f(self):
         return 'olá, mundo'
-Então MinhaClasse.i e MinhaClasse.f são referências de atributo válidas, retornando um inteiro e um objeto de função, respectivamente. Atributos de classe também podem ser atribuídos, para que você possa alterar o valor de MyClass.i por atribuição. __doc__ também é um atributo válido, retornando a docstring pertencente à classe: "Um exemplo de classe simples".
+#Então MinhaClasse.i e MinhaClasse.f são referências de atributo válidas, retornando um inteiro e um objeto de função, respectivamente. Atributos de classe também podem ser atribuídos, para que você possa alterar o valor de MyClass.i por atribuição. __doc__ também é um atributo válido, retornando a docstring pertencente à classe: "Um exemplo de classe simples".
 
-A instanciação de classe usa notação de função. Apenas finja que o objeto de classe é uma função sem parâmetros que retorna uma nova instância da classe. Por exemplo (assumindo a classe acima):
+#A instanciação de classe usa notação de função. Apenas finja que o objeto de classe é uma função sem parâmetros que retorna uma nova instância da classe. Por exemplo (assumindo a classe acima):
 
 x = MinhaClasse()
-Cria uma instância da classe e atribui esse objeto à variável local x.
+#Cria uma instância da classe e atribui esse objeto à variável local x.
 
 A operação de instanciação ("chamar" um objeto de classe) cria um objeto vazio. Muitas classes gostam de criar objetos com instâncias personalizadas para um estado inicial específico. Portanto, uma classe pode definir um método especial, chamado init(), assim:
 
